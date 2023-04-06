@@ -6,7 +6,7 @@
     "angularMovies": {
       "projectType": "application",
       "schematics": {
-        "@schematics/angular:application": {
+        "@schematics/angular:component": {
           "style": "scss"
         }
       },
