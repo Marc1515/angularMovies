@@ -1,1 +1,18 @@
-<p>login works!</p>
+<section>
+    <form action="">
+        <div class="row mt-4 text-center">
+            <div class="col-12">
+                <img [src]="logo" class="logo" alt="login">
+            </div>
+            <div class="col-12 mt-4">
+                <input type="text" pInputText [(ngModel)]="value" name="userName" />
+            </div>
+            <div class="col-12 mt-2">
+                <p-password [(ngModel)]="value" [feedback]="false"></p-password>
+            </div>
+            <div class="col-12 mt-2">
+                <p-button label="Iniciar Sesión" (click)="login()"></p-button>
+            </div>
+        </div>
+    </form>
+</section>
