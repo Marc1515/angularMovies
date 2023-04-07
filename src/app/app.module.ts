@@ -7,6 +7,10 @@ import { ModulesComponent } from './modules/modules.component';
 import { MoviesComponent } from './modules/movies/movies.component';
 import { SharedComponent } from './shared/shared.component';
 import { LoginComponent } from './modules/login/login.component';
+import { InputTextModule } from 'primeng/inputtext';
+import { FormsModule } from '@angular/forms';
+import { PasswordModule } from 'primeng/password';
+import { ButtonModule } from 'primeng/button';
 
 @NgModule({
   declarations: [
@@ -18,7 +22,11 @@ import { LoginComponent } from './modules/login/login.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    InputTextModule,
+    FormsModule,
+    PasswordModule,
+    ButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]
