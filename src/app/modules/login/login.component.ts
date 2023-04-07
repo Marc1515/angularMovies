@@ -15,7 +15,7 @@ export class LoginComponent {
 
 
   login() {
-    
+    console.log(this.value)
   }
-
+  
 }

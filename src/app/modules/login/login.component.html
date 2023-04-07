@@ -5,10 +5,10 @@
                 <img [src]="logo" class="logo" alt="login">
             </div>
             <div class="col-12 mt-4">
-                <input type="text" pInputText [(ngModel)]="value" name="userName" />
+                <input type="text" pInputText [(ngModel)]="value" name="userName" autocomplete="off" />
             </div>
             <div class="col-12 mt-2">
-                <p-password [(ngModel)]="value" [feedback]="false"></p-password>
+                <p-password [(ngModel)]="value" [feedback]="false" name="pass"></p-password>
             </div>
             <div class="col-12 mt-2">
                 <p-button label="Iniciar Sesión" (click)="login()"></p-button>
