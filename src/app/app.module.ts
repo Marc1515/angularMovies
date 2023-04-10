@@ -8,7 +8,7 @@ import { MoviesComponent } from './modules/movies/movies.component';
 import { SharedComponent } from './shared/shared.component';
 import { LoginComponent } from './modules/login/login.component';
 import { InputTextModule } from 'primeng/inputtext';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { PasswordModule } from 'primeng/password';
 import { ButtonModule } from 'primeng/button';
 
@@ -26,7 +26,8 @@ import { ButtonModule } from 'primeng/button';
     InputTextModule,
     FormsModule,
     PasswordModule,
-    ButtonModule
+    ButtonModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

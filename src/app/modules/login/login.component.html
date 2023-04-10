@@ -1,14 +1,14 @@
 <section>
-    <form action="">
+    <form [formGroup]="formLogin">
         <div class="row mt-4 text-center">
             <div class="col-12">
                 <img [src]="logo" class="logo" alt="login">
             </div>
             <div class="col-12 mt-4">
-                <input type="text" pInputText [(ngModel)]="value" name="userName" autocomplete="off" />
+                <input type="text" pInputText formControlName="userName" autocomplete="off" />
             </div>
             <div class="col-12 mt-2">
-                <p-password [(ngModel)]="value" [feedback]="false" name="pass"></p-password>
+                <p-password type="password"  [feedback]="false" formControlName="password"></p-password>
             </div>
             <div class="col-12 mt-2">
                 <p-button label="Iniciar Sesión" (click)="login()"></p-button>
