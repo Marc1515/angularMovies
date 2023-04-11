@@ -5,7 +5,6 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ModulesComponent } from './modules/modules.component';
-import { MoviesComponent } from './modules/movies/movies.component';
 import { SharedComponent } from './shared/shared.component';
 import { LoginComponent } from './modules/login/login.component';
 import { InputTextModule } from 'primeng/inputtext';
@@ -18,7 +17,6 @@ import { ButtonModule } from 'primeng/button';
   declarations: [
     AppComponent,
     ModulesComponent,
-    MoviesComponent,
     SharedComponent,
     LoginComponent
   ],
@@ -30,7 +28,8 @@ import { ButtonModule } from 'primeng/button';
     PasswordModule,
     ButtonModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
