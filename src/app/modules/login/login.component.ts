@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { ApiService } from 'src/app/services/api.service';
 import { properties } from 'src/assets/properties/properties';
+import { ConstantUri } from 'src/app/utils/constantUri';
 
 
 @Component({
@@ -15,13 +17,14 @@ export class LoginComponent {
   formLogin: FormGroup = new FormGroup({})
 
   constructor(
-    private fb: FormBuilder
+    private fb: FormBuilder,
+    private readonly apiService: ApiService<any>
   ) { }
 
 
   ngOnInit(): void {
     this.formLogin = this.fb.group({
-      userName: ['', Validators.required],
+      username: ['', Validators.required],
       password: ['', Validators.required]
     })
   }
@@ -41,6 +44,21 @@ export class LoginComponent {
 
     }
 
+
+    const { username, password } = this.formLogin.value
+
+    const body = {
+      username,
+      password,
+      request_token: sessionStorage.getItem("requestToken")
+    }
+
+    const configPost = { url: ConstantUri.validateWithLogin, params: {api_key: ConstantUri.apiKey}, body }
+
+    this.apiService.postService(configPost).subscribe(val => {
+      console.log(val)
+    })
+    
     console.log(this.formLogin.value)
 
   }
