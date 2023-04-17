@@ -29,7 +29,7 @@ import { ButtonModule } from 'primeng/button';
     ButtonModule,
     ReactiveFormsModule,
     HttpClientModule,
-    AppRoutingModule
+    AppRoutingModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

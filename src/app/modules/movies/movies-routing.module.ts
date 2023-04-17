@@ -8,6 +8,10 @@ const routes: Routes = [
     component: MoviesComponent
   },
   {
+    path:'',
+    component: MoviesComponent
+  },
+  {
     path: '**',
     pathMatch: 'full',
     redirectTo: ''
