@@ -1,1 +1,31 @@
-<p>movie-detail works!</p>
+<div *ngIf="movie" class="row container-movie">
+    <div class="col-12 col-md-6 text-center p-0">
+        <img [src]="imgBaseUrl + movie.backdrop_path" class="img-poster" alt="">
+    </div>
+    <div class="col-12 col-md-6 mt-4">
+        <strong>Genero: </strong>
+        <div *ngFor="let genre of movie.genres" class="d-inline">
+            <p-tag severity="success" value="Success"></p-tag>
+        </div>
+        <div class="mt-2">
+            <strong>Título: </strong><label>{{movie.title}}</label>
+        </div>
+        <div class="mt-2">
+            <strong>Eslogan: </strong><label>{{movie.tagline}}</label>
+        </div>
+        <div class="mt-2">
+            <strong>Tráiler: </strong><label>{{movie.overview}}</label>
+        </div>
+        <div class="mt-2">
+            <strong>Total de votos: </strong><label>{{movie.vote_count}}</label>
+        </div>
+        <div class="mt-2">
+            <strong>Estado </strong><label>{{movie.status}}</label>
+        </div>
+        <div class="col-12 mt-4">
+            <p-button label="Submit" styleClass="p-button-link" (click)="goBack()"></p-button>
+        </div>
+
+    </div>
+
+</div>
